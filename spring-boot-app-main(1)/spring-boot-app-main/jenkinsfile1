@@ -4,15 +4,15 @@ pipeline {
     environment {
         DOCKER_IMAGE = "justice/social-app"
         DOCKER_TAG = "latest"
-        DOCKER_CREDENTIALS_ID = "docker"
-        GITHUB_CREDENTIALS_ID = "github-seccred"
+        DOCKER_CREDENTIALS_ID = "dharmaseelanr/devops_2"
+        GITHUB_CREDENTIALS_ID = "Dharmaseeelan/Devops_2"
         KUBECONFIG = "/var/lib/jenkins/.kube/config"
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: GITHUB_CREDENTIALS_ID, url: 'https://github.com/justicesecops-10/spring-boot-app', branch: 'main'
+                git credentialsId: GITHUB_CREDENTIALS_ID, url: 'https://github.com/Dharmaseelan2004/Devops_2', branch: 'main'
             }
         }
 
